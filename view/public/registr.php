@@ -1,7 +1,5 @@
-
 <div class="container">
-  <div><a style="float: right; font-size: 25px; background: #777;" href="http://mvc.dev/welcome/registration/">if you havn`t account</a></div>
-  <form method="POST" action="/welcome/login/">
+  <form method="POST" action="/welcome/reg/">
     <div class="form-group">
       <label for="email">Email address:</label>
       <input type="text" class="form-control" id="email" name="username">
@@ -10,7 +8,11 @@
       <label for="pwd">Password:</label>
       <input type="password" class="form-control" id="pwd" name="pass">
     </div>
-    <button type="submit" class="btn btn-default" name="login">Submit</button>
+    <div class="form-group">
+      <label for="pwd">Conf Password:</label>
+      <input type="password" class="form-control" id="pwd" name="cpass">
+    </div>
+    <button type="submit" class="btn btn-default" name="reg">Submit</button>
   </form>
-  <h1><?php echo $this->var ?></h1>
+  <span><?php echo $this->var; ?></span>
 </div>

@@ -9,9 +9,16 @@
 * 
 */
 class generalView{
+
+	public $var;
 	
-	function __construct($view_name)
+	function __construct($add = [])
 	{
+		$this->var = $add;
+	}
+
+
+	public function render($view_name){
 		include '../view/public/header.php';
 		include '../view/public/'.$view_name.'.php';
 		include '../view/public/foother.php';

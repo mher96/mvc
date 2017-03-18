@@ -9,18 +9,18 @@ function ref_url(){
 	// var_dump($url);
 	// var_dump(count($url));
 	$path = array_slice($url, 1, count($url)-2);
-	var_dump($path);
+	//var_dump($path);
 	return $path;
 }
 function loader_conte($name){
 	$name = preg_split('/(?=[A-Z])/',$name);
-	var_dump($name);
+	//var_dump($name);
 	if (empty($name[1])) {
-		echo '<h4><spna style="color:red;">your class name dont have a spec name</span></h4>';
+		//echo '<h4><spna style="color:red;">your class name dont have a spec name</span></h4>';
 	}
 	elseif ($name[1] == 'Controller') {
-		echo "else if cont</br>";
-		echo '../controller/'.$name[0].'.php';
+		//echo "else if cont</br>";
+		//echo '../controller/'.$name[0].'.php';
 		include '../controller/'.$name[0].'.php';
 	}
 	elseif ($name[1] == 'Model') {
@@ -31,14 +31,14 @@ function loader_conte($name){
 	}
 	
 	else{
-		echo '<h4><spna style="color:red;">fdgdfyour class name dont have a spec name</span></h4>';
+		//echo '<h4><spna style="color:red;">fdgdfyour class name dont have a spec name</span></h4>';
 	}
 }
 spl_autoload_register('loader_conte');
 function routing($path){
 	if (isset($path[2])) {
 		$args = array_slice($path, 2);
-		var_dump($args);
+		//var_dump($args);
 		// echo $path[0].'Controller';
 		$controller_name = $path[0].'Controller';
 		$controller_obj = new $controller_name;
